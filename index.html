@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Здоровое поколение: среда возможностей</title>
+    <meta name="description" content="Интерактивный портал о культуре здорового образа жизни и возможностях для молодёжи.">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0f172a">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%2334d399' stroke-width='3'/%3E%3Cpath d='M10 17l4 4 8-9' fill='none' stroke='%2334d399' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo" data-i18n-aria-label="aria.home" aria-label="На главную">
+                <svg class="logo__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="3"/>
+                    <path d="M10 17L14 21L22 12" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo__text"><span data-i18n="logo.a">Среда</span><strong data-i18n="logo.b">Возможностей</strong></span>
+            </a>
+
+            <nav class="nav" data-i18n-aria-label="aria.nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li><a href="#infographics" class="nav__link" data-i18n="nav.facts">Среда и факты</a></li>
+                    <li><a href="#quiz" class="nav__link" data-i18n="nav.quiz">Тест</a></li>
+                    <li><a href="#tracker" class="nav__link" data-i18n="nav.tracker">Трекер</a></li>
+                    <li><a href="#calculator" class="nav__link" data-i18n="nav.calc">Калькулятор</a></li>
+                    <li><a href="#ideas" class="nav__link" data-i18n="nav.ideas">Идеи</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switcher" role="group" data-i18n-aria-label="aria.lang" aria-label="Выбор языка">
+                <button type="button" class="lang-opt active" data-set-lang="ru" aria-pressed="true">RU</button>
+                <button type="button" class="lang-opt" data-set-lang="en" aria-pressed="false">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content reveal">
+                    <h1 class="hero__title" data-i18n="hero.title">Здоровое поколение: среда возможностей</h1>
+                    <p class="hero__subtitle" data-i18n="hero.subtitle">Твоё тело и разум — главный ресурс для достижения целей. Управляй энергией, формируй полезные привычки и создавай своё будущее осознанно.</p>
+                    <div class="hero__actions">
+                        <a href="#quiz" class="btn btn--primary" data-i18n="hero.cta1">Пройти чек-ап</a>
+                        <a href="#tracker" class="btn btn--outline" data-i18n="hero.cta2">Запустить трекер</a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <img src="images/hero.webp"
+                         alt="Иллюстрация баланса здоровья и энергии" data-i18n-alt="hero.alt"
+                         width="800" height="597"
+                         fetchpriority="high"
+                         class="hero__img pulse-element">
+                </div>
+            </div>
+        </section>
+
+        <section id="infographics" class="section">
+            <div class="container">
+                <h2 class="section__title" data-i18n="facts.title">Три опоры твоей продуктивности</h2>
+                <p class="section__desc" data-i18n="facts.desc">Здоровье молодёжи на 50% зависит от образа жизни и ежедневных привычек.</p>
+
+                <div class="cards-grid">
+                    <article class="card reveal">
+                        <img src="images/sleep.webp" alt="Иллюстрация здорового сна" data-i18n-alt="fact1.alt"
+                             width="640" height="357" loading="lazy" class="card__img">
+                        <div class="card__stat" data-i18n="fact1.stat">8 часов</div>
+                        <h3 class="card__title" data-i18n="fact1.title">Качественный сон</h3>
+                        <p class="card__text" data-i18n="fact1.text">Повышает концентрацию внимания на 40% и снижает уровень стресса перед экзаменами.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <img src="images/move.webp" alt="Иллюстрация физической активности" data-i18n-alt="fact2.alt"
+                             width="640" height="357" loading="lazy" class="card__img">
+                        <div class="card__stat" data-i18n="fact2.stat">60 минут</div>
+                        <h3 class="card__title" data-i18n="fact2.title">Движение в день</h3>
+                        <p class="card__text" data-i18n="fact2.text">Стимулирует выработку эндорфинов — естественной защиты от усталости и выгорания.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <img src="images/detox.webp" alt="Иллюстрация цифрового детокса" data-i18n-alt="fact3.alt"
+                             width="640" height="357" loading="lazy" class="card__img">
+                        <div class="card__stat" data-i18n="fact3.stat">2 часа</div>
+                        <h3 class="card__title" data-i18n="fact3.title">Цифровой детокс</h3>
+                        <p class="card__text" data-i18n="fact3.text">Отказ от экранов перед сном восстанавливает выработку мелатонина и улучшает память.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title" data-i18n="quiz.title">Интерактив 1: Твой индекс энергии</h2>
+                <div class="widget-box">
+                    <div id="quiz-screen">
+                        <p class="quiz__progress" id="quiz-progress">Вопрос 1 из 3</p>
+                        <h3 class="quiz__question" id="quiz-question">Загрузка вопроса...</h3>
+                        <div class="quiz__options" id="quiz-options"></div>
+                    </div>
+                    <div id="quiz-result" class="hidden" aria-live="polite">
+                        <h3 class="quiz__result-title">
+                            <span data-i18n="quiz.resultLabel">Твой результат:</span>
+                            <span id="quiz-score">0</span>/30
+                            <span data-i18n="quiz.points">баллов</span>
+                        </h3>
+                        <p id="quiz-recommendation" class="quiz__recommendation"></p>
+                        <button type="button" id="quiz-restart" class="btn btn--primary" data-i18n="quiz.restart">Пройти заново</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracker" class="section">
+            <div class="container">
+                <h2 class="section__title" data-i18n="tracker.title">Интерактив 2: Трекер здорового дня</h2>
+                <div class="widget-box tracker-grid">
+                    <div class="tracker__list">
+                        <label class="habit-item">
+                            <input type="checkbox" class="habit-checkbox" value="25">
+                            <span data-i18n="tracker.h1">Выпил стакан чистой воды после пробуждения</span>
+                        </label>
+                        <label class="habit-item">
+                            <input type="checkbox" class="habit-checkbox" value="25">
+                            <span data-i18n="tracker.h2">Сделал разминку или прошёл 8 000 шагов</span>
+                        </label>
+                        <label class="habit-item">
+                            <input type="checkbox" class="habit-checkbox" value="25">
+                            <span data-i18n="tracker.h3">Провёл 1 час без смартфона и соцсетей</span>
+                        </label>
+                        <label class="habit-item">
+                            <input type="checkbox" class="habit-checkbox" value="25">
+                            <span data-i18n="tracker.h4">Добавил свежие овощи или фрукты в рацион</span>
+                        </label>
+                    </div>
+
+                    <div class="tracker__visual">
+                        <svg id="tracker-ring" class="progress-ring" width="180" height="180" viewBox="0 0 160 160" role="img" aria-label="0%">
+                            <circle class="progress-ring__bg" cx="80" cy="80" r="68" fill="none" stroke-width="12"/>
+                            <circle id="progress-circle" class="progress-ring__circle" cx="80" cy="80" r="68" fill="none" stroke-width="12" stroke-linecap="round"/>
+                            <text id="progress-text" class="progress-ring__text" x="80" y="80" text-anchor="middle" dominant-baseline="central">0%</text>
+                        </svg>
+                        <p id="tracker-caption" class="tracker__caption" aria-live="polite"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title" data-i18n="calc.title">Интерактив 3: Калькулятор воды</h2>
+                <p class="section__desc" data-i18n="calc.desc">Узнай суточную норму воды — результат отобразится на круговой диаграмме.</p>
+                <div class="widget-box calc-grid">
+                    <form id="water-form" class="calc-form" novalidate>
+                        <div class="form-group">
+                            <label for="weight-input" data-i18n="calc.weight">Ваш вес (кг)</label>
+                            <input type="number" id="weight-input" inputmode="decimal" min="30" max="200" step="0.1" placeholder="65" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="activity-select" data-i18n="calc.activity">Уровень активности</label>
+                            <select id="activity-select">
+                                <option value="30" data-i18n="calc.low">Низкий (30 мл на кг)</option>
+                                <option value="35" data-i18n="calc.mid" selected>Средний (35 мл на кг)</option>
+                                <option value="40" data-i18n="calc.high">Высокий (40 мл на кг)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--primary" data-i18n="calc.submit">Рассчитать</button>
+                        <p id="calc-error" class="error-msg" role="alert"></p>
+                    </form>
+
+                    <div id="calc-result" class="calc-result hidden" aria-live="polite">
+                        <svg id="water-ring" class="water-ring" width="200" height="200" viewBox="0 0 160 160" role="img" aria-label="">
+                            <circle class="progress-ring__bg" cx="80" cy="80" r="68" fill="none" stroke-width="12"/>
+                            <circle id="water-circle" class="progress-ring__circle" cx="80" cy="80" r="68" fill="none" stroke-width="12" stroke-linecap="round"/>
+                            <text id="water-liters" class="water-ring__value" x="80" y="74" text-anchor="middle" dominant-baseline="central">0</text>
+                            <text id="water-unit" class="water-ring__unit" x="80" y="102" text-anchor="middle" dominant-baseline="central">л</text>
+                        </svg>
+                        <div class="calc-result__info">
+                            <p id="calc-result-text" class="calc-result__text"></p>
+                            <p id="calc-glasses" class="calc-result__glasses"></p>
+                            <p id="calc-scale" class="calc-result__scale"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ideas" class="section">
+            <div class="container">
+                <h2 class="section__title" data-i18n="ideas.title">Интерактив 4: Предложи инициативу</h2>
+                <p class="section__desc" data-i18n="ideas.desc">Поделись идеей, как сделать среду вокруг нас здоровее.</p>
+                <div class="widget-box">
+                    <form id="idea-form" class="idea-form" novalidate>
+                        <div class="form-group">
+                            <label for="user-name" data-i18n="ideas.name">Ваше имя</label>
+                            <input type="text" id="user-name" maxlength="40" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-idea" data-i18n="ideas.idea">Ваша идея</label>
+                            <textarea id="user-idea" rows="4" maxlength="300"></textarea>
+                        </div>
+                        <label class="consent-label">
+                            <input type="checkbox" id="privacy-consent">
+                            <span>
+                                <span data-i18n="ideas.consent">Я согласен(на) с</span>
+                                <a href="#" id="open-privacy" data-i18n="ideas.consentLink">политикой конфиденциальности</a>
+                            </span>
+                        </label>
+                        <button type="submit" class="btn btn--primary" data-i18n="ideas.submit">Отправить идею</button>
+                        <p id="idea-error" class="error-msg" role="alert"></p>
+                    </form>
+
+                    <div class="ideas-board">
+                        <h3 data-i18n="ideas.board">Идеи участников</h3>
+                        <ul id="ideas-list" class="ideas-list">
+                            <li>
+                                <strong data-i18n="ideas.seedAuthor">Мария (Студсовет)</strong>:
+                                <span data-i18n="ideas.seedText">Организовать еженедельный турнир по настольному теннису между группами.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p data-i18n="footer.text">2026 Здоровое поколение: среда возможностей.</p>
+            <button type="button" id="footer-privacy-btn" class="link-btn" data-i18n="footer.privacy">Политика конфиденциальности</button>
+        </div>
+    </footer>
+
+    <dialog id="privacy-dialog" class="modal" aria-labelledby="privacy-title">
+        <div class="modal__content">
+            <h2 id="privacy-title" data-i18n="privacy.title">Политика конфиденциальности</h2>
+            <p data-i18n="privacy.text">Сайт не отправляет данные на сервер. Имя и текст идеи показываются только на этой странице и пропадают после её закрытия. Cookies и аналитика не используются. В браузере сохраняется только выбранный язык интерфейса.</p>
+            <button type="button" id="close-privacy" class="btn btn--primary" data-i18n="privacy.close">Закрыть</button>
+        </div>
+    </dialog>
+</body>
+</html>
